@@ -1,10 +1,13 @@
 body {
     font: 14px "Century Gothic", Futura, sans-serif;
-    margin: 20px;
+    margin: 0;
+    background: #e5e7eb;
+    color: #374151;
   }
   
   ol, ul {
-    padding-left: 30px;
+    list-style: none;
+    padding: 0;
   }
   
   .board-row:after {
@@ -18,18 +21,19 @@ body {
   }
   
   .square {
-    background: #fff;
-    border: 1px solid #999;
+    background: #f3f4f6;
+    border-radius: 10px;
+    border: none;
     float: left;
     font-size: 24px;
     font-weight: bold;
-    line-height: 34px;
-    height: 34px;
-    margin-right: -1px;
-    margin-top: -1px;
+    line-height: 100px;
+    height: 100px;
+    margin-right: 10px;
+    margin-top: 10px;
     padding: 0;
     text-align: center;
-    width: 34px;
+    width: 100px;
   }
   
   .square:focus {
@@ -43,9 +47,41 @@ body {
   .game {
     display: flex;
     flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
   }
-  
+
+  .game-board {
+  }
+
   .game-info {
-    margin-left: 20px;
+    width: 320px;
+    text-align: center;
+    font-weight: bold;
   }
-  
+
+  button {
+    width: 100%;
+    padding: 7px 0;
+    margin-bottom: 5px;
+    border-style: none;
+    border-radius: 5px;
+    color: #374151;
+    background: #f3f4f6;
+    font-weight: 600;  
+    transition: 0.2s ease-in-out all; 
+    box-shadow: 
+      0 1px 3px 0 rgba(0, 0, 0, 0.1),
+      0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  }
+
+  button:hover {
+    color: #f9fafb;
+    background: #d1d5db;
+    transform: scale(1.05);
+    box-shadow: 
+      0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
